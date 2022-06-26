@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>WebStudio</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="nav">
+            <a class="nav__logo" href="index.html"
+              >Web<span class="nav__logo-second-color">Studio</span>
+            </a>
+            <button
+              type="button"
+              class="nav__menu-button"
+              aria-expanded="false"
+              data-menu-button
+            >
+              <svg
+                width="40px"
+                height="40px"
+                aria-label="Переключатель мобильного меню"
+                aria-controls="menu-container"
+              >
+                <use
+                  class="nav__icon-cross"
+                  href="images/icons.svg#close-burger"
+                ></use>
+                <use
+                  class="nav__icon-menu"
+                  href="images/icons.svg#burger"
+                ></use>
+              </svg>
+            </button>
+            <div class="nav__menu-container" id="menu-container" data-menu>
+              <ul class="nav-site">
+                <li class="nav-site__item">
+                  <a class="nav-site__link" href="index.html">Студия</a>
+                </li>
+                <li class="nav-site__item">
+                  <a
+                    class="nav-site__link nav-site__current"
+                    href="portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="nav-site__item">
+                  <a class="nav-site__link" href="#">Контакты</a>
+                </li>
+              </ul>
+              <ul class="nav-contacts">
+                <li class="nav-contacts__item">
+                  <a
+                    class="nav-contacts__link nav-contacts__link-tel"
+                    href="tel:+380961111111"
+                  >
+                    <svg
+                      class="nav-contacts__icon-tel"
+                      width="10px"
+                      height="16px"
+                    >
+                      <use href="images/icons.svg#icon-phone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="nav-contacts__item">
+                  <a
+                    class="nav-contacts__link nav-contacts__link-mail"
+                    href="mailto:info@devstudio.com"
+                  >
+                    <svg
+                      class="nav-contacts__icon-mail"
+                      width="16px"
+                      height="12px"
+                    >
+                      <use href="images/icons.svg#icon-mail"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav-social">
+                <li class="nav-social__item">
+                  <a class="nav-social__link" href="#">Instagram</a>
+                </li>
+                <li class="nav-social__item">
+                  <a class="nav-social__link" href="#">Twitter</a>
+                </li>
+                <li class="nav-social__item">
+                  <a class="nav-social__link" href="#">Facebook</a>
+                </li>
+                <li class="nav-social__item">
+                  <a class="nav-social__link" href="#">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="portfolio section">
+        <div class="container">
+          <ul class="portfolio__button">
+            <li class="portfolio__button-item">
+              <button class="portfolio__button-filter" type="button">
+                Все
+              </button>
+            </li>
+            <li class="portfolio__button-item">
+              <button class="portfolio__button-filter" type="button">
+                Веб-сайты
+              </button>
+            </li>
+            <li class="portfolio__button-item">
+              <button class="portfolio__button-filter" type="button">
+                Приложения
+              </button>
+            </li>
+            <li class="portfolio__button-item">
+              <button class="portfolio__button-filter" type="button">
+                Дизайн
+              </button>
+            </li>
+            <li class="item">
+              <button class="portfolio__button-filter" type="button">
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="
+                      images/technokryak.jpg   270w,
+                      images/technokryak2x.jpg 540w
+                    "
+                    src="images/technokryak.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">Технокряк</h2>
+                  <p class="projects__subtitle">Веб-сайт</p>
+                </div></a
+              >
+            </li>
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="
+                      images/neworlean.jpg   270w,
+                      images/neworlean2x.jpg 540w
+                    "
+                    src="images/neworlean.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">
+                    Постер New Orlean vs Golden Star
+                  </h2>
+                  <p class="projects__subtitle">Дизайн</p>
+                </div></a
+              >
+            </li>
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="images/seafood.jpg 270w, images/seafood2x.jpg 540w"
+                    src="images/seafood.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">Ресторан Seafood</h2>
+                  <p class="projects__subtitle">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="images/prime.jpg 270w, images/prime2x.jpg 540w"
+                    src="images/prime.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">Проект Prime</h2>
+                  <p class="projects__subtitle">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="images/boxes.jpg 270w, images/boxes2x.jpg 540w"
+                    src="images/boxes.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">Проект Boxes</h2>
+                  <p class="projects__subtitle">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="
+                      images/inspiration.jpg   270w,
+                      images/inspiration2x.jpg 540w
+                    "
+                    src="images/inspiration.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">Inspiration has no Borders</h2>
+                  <p class="projects__subtitle">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="
+                      images/limedition.jpg   270w,
+                      images/limedition2x.jpg 540w
+                    "
+                    src="images/limedition.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">Издание Limited Edition</h2>
+                  <p class="projects__subtitle">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="images/lab.jpg 270w, images/lab2x.jpg 540w"
+                    src="images/lab.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">Проект LAB</h2>
+                  <p class="projects__subtitle">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="projects__thumb">
+                  <img
+                    srcset="images/growing.jpg 270w, images/growing2x.jpg 540w"
+                    src="images/growing.jpg"
+                    alt="Веб-сайт открытый на ноутбуке"
+                    width="370"
+                    sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                  />
+                  <div class="projects__card-hover">
+                    <h3 class="projects__card-hover-text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </h3>
+                  </div>
+                </div>
+                <div class="projects__card-text">
+                  <h2 class="projects__title">Growing Business</h2>
+                  <p class="projects__subtitle">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="test">
+          <div class="test__test">
+            <div class="footer-flex">
+              <a href="index.html" class="footer__logo"
+                >Web<span class="footer__logo-span">Studio</span>
+              </a>
+              <address class="footer__adress">
+                <p class="footer__city">г. Киев, пр-т Леси Украинки, 26</p>
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="mailto:info@devstudio.com" class="footer__link"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a href="tel:+380961111111" class="footer__link"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="footer__links">
+              <h3 class="footer__title">Присоединяйтесь</h3>
+              <ul class="footer__social-links">
+                <li>
+                  <a class="footer__social-icon" href="#"
+                    ><svg class="inst" width="20" height="20">
+                      <use href="images/icons.svg#inst"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__social-icon" href="#"
+                    ><svg class="twitter" width="20" height="20">
+                      <use href="images/icons.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__social-icon" href="#"
+                    ><svg class="fb" width="20" height="20">
+                      <use href="images/icons.svg#fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__social-icon" href="#"
+                    ><svg class="linkedin" width="20" height="20">
+                      <use href="images/icons.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="follow">
+            <h3 class="follow__title">Подпишитесь на рассылку</h3>
+            <label class="follow__field">
+              <input
+                type="email"
+                class="follow__input"
+                name="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="follow__btn">Подписаться</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/menu.js"></script>
+  </body>
+</html>
