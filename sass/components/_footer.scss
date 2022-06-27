@@ -47,8 +47,11 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-
   display: block;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .footer__logo-span {
   color: $white-color;
@@ -56,6 +59,9 @@
 .footer__adress {
   font-style: normal;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .footer__city {
   font-style: normal;
@@ -109,6 +115,9 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: $white-color;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .footer__social-links {
   display: flex;
@@ -177,6 +186,7 @@
   color: $white-color;
   @media screen and (min-width: 1200px) {
     margin-bottom: 20px;
+    text-align: left;
   }
 }
 .follow__input {
