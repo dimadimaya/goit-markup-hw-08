@@ -163,7 +163,7 @@ header {
 }
 
 .nav__menu-button {
-  z-index: 2;
+  z-index: 1;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -190,7 +190,7 @@ header {
 }
 
 .nav__menu-container {
-  z-index: 1;
+  z-index: 0;
 }
 @media screen and (max-width: 767px) {
   .nav__menu-container {
@@ -202,7 +202,6 @@ header {
     top: 0;
   }
   .nav__menu-container.is-open {
-    padding: 40px 10px 10px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -212,13 +211,15 @@ header {
             flex-direction: column;
     position: fixed;
     overflow: auto;
-    max-width: 100%;
+    padding: 40px 10px 10px 10px;
+    width: 100%;
     height: 100%;
+    padding: 48px 40px;
   }
 }
-@media screen and (max-width: 767px) and (min-width: 450px) {
+@media screen and (max-width: 767px) and (min-width: 480px) {
   .nav__menu-container.is-open {
-    padding: 48px 40px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -402,6 +403,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media screen and (max-width: 767px) {
   .nav-social {
@@ -441,30 +444,34 @@ header {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-mobile.jpg);
   background-size: cover;
 }
-
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .main {
+  .main .main {
     background-image: url(../images/main-mobile2x.jpg);
   }
 }
+
 @media (min-width: 451px) {
   .main {
-    background-image: url(../images/main-tablet.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-tablet.jpg);
   }
 }
 @media (min-width: 451px) and (min-device-pixel-ratio: 2), (min-width: 451px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 451px) and (min-resolution: 192dpi), (min-width: 451px) and (min-resolution: 2dppx) {
   .main {
-    background-image: url(../images/main-tablet2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-tablet2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-tablet2x.jpg);
   }
 }
 @media (min-width: 769px) {
   .main {
-    background-image: url(../images/main-dekstop.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-dekstop.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-dekstop.jpg);
   }
 }
 @media (min-width: 769px) and (min-device-pixel-ratio: 2), (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 769px) and (min-resolution: 192dpi), (min-width: 769px) and (min-resolution: 2dppx) {
   .main {
-    background-image: url(../images/main-dekstop2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-dekstop2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-dekstop2x.jpg);
   }
 }
 @media (min-width: 769px) and (min-width: 1200px) {
@@ -474,20 +481,23 @@ header {
   }
 }
 .main__title {
-  width: 360px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
   letter-spacing: 0.06em;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
-  color: #ffffff;
+}
+@media screen and (max-width: 1199px) {
+  .main__title {
+    max-width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .main__title {
     width: 700px;
-    font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -1306,8 +1316,8 @@ header {
 }
 
 .form {
-  z-index: 3;
-  padding: 10px;
+  z-index: 9;
+  padding: 20px;
 }
 @media screen and (min-width: 450px) {
   .form {
@@ -1446,7 +1456,7 @@ header {
   position: absolute;
   width: 16px;
   height: 16px;
-  left: 10px;
+  left: 20px;
   opacity: 0;
 }
 @media screen and (min-width: 450px) {
@@ -1479,7 +1489,7 @@ header {
 
 .form__subtitle {
   font-weight: 400;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: #757575;
@@ -1551,19 +1561,19 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .portfolio__button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio__button {
-    margin-bottom: 65px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1656,8 +1666,10 @@ header {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects__link:nth-child(1) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .projects__link:nth-child(1) {
+    margin-bottom: 30px;
+  }
 }
 .projects__link:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
