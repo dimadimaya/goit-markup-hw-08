@@ -75,7 +75,6 @@ button {
 }
 
 header {
-  position: relative;
   font-family: Roboto, sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -163,7 +162,7 @@ header {
 }
 
 .nav__menu-button {
-  z-index: 1;
+  z-index: 2;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -190,7 +189,7 @@ header {
 }
 
 .nav__menu-container {
-  z-index: 0;
+  z-index: 1;
 }
 @media screen and (max-width: 767px) {
   .nav__menu-container {
@@ -198,8 +197,8 @@ header {
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     display: none;
-    position: absolute;
-    top: 0;
+    top: 0%;
+    left: 0;
   }
   .nav__menu-container.is-open {
     display: -webkit-box;
@@ -209,17 +208,13 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: absolute;
     position: fixed;
-    overflow: auto;
+    overflow: hidden;
     padding: 40px 10px 10px 10px;
     width: 100%;
     height: 100%;
     padding: 48px 40px;
-  }
-}
-@media screen and (max-width: 767px) and (min-width: 480px) {
-  .nav__menu-container.is-open {
-    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1609,13 +1604,15 @@ header {
   margin-right: 8px;
 }
 
-.projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -15px;
+@media screen and (min-width: 480px) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 @media screen and (min-width: 768px) {
   .projects {
